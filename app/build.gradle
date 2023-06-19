@@ -1,0 +1,81 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.20'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.github.lanalebedeva.mydiscord'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.github.lanalebedeva.mydiscord"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunnerArguments clearPackageData: 'true'
+    }
+
+    testOptions {
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+    implementation project(':ui')
+
+    implementation deps.androidx.ktx
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.constraintlayout
+    implementation deps.androidx.lifecycle.livedata
+    implementation deps.androidx.fragment
+    implementation deps.androidx.navigation.fragment
+    implementation deps.androidx.navigation.ui
+    implementation deps.material
+    implementation deps.tinkoff.tirecyclerrx
+    implementation deps.viewbindingpropertydelegate
+    implementation deps.squareup.retrofit2
+    implementation deps.squareup.convertermoshi
+    implementation deps.squareup.logginginterceptor
+    implementation deps.squareup.moshikotlin
+    implementation deps.jetbrains.serialization
+    implementation deps.dagger.runtime
+    implementation deps.'androidx'.room.ktx
+
+    kapt deps.dagger.compiler
+    kapt deps.'androidx'.room.compiler
+
+
+    testImplementation deps.junit
+    testImplementation deps.androidx.arch
+    testImplementation deps.jetbrains.coroutines
+
+    androidTestImplementation deps.androidx.test.junit
+    androidTestImplementation deps.androidx.test.runner
+    androidTestImplementation deps.kaspersky
+    androidTestImplementation deps.squareup.okhttp3
+
+    androidTestUtil deps.androidx.test.orchestrator
+}

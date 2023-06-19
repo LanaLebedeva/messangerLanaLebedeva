@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/channels_dest"
+        android:title="@string/channels"
+        android:icon="@drawable/channel"/>
+    <item android:id="@+id/people_dest"
+        android:title="@string/people"
+        android:icon="@drawable/people"/>
+    <item android:id="@+id/profile_dest"
+        android:title="@string/profile"
+        android:icon="@drawable/profile"/>
+</menu>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_horizontal">9dp</dimen>
+    <dimen name="padding_vertical">5dp</dimen>
+    <dimen name="reaction_view_text_size">14sp</dimen>
+    <dimen name="name_in_message">14sp</dimen>
+    <dimen name="message">16sp</dimen>
+    <dimen name="data_in_list_message">14sp</dimen>
+    <dimen name="default_search">24sp</dimen>
+    <dimen name="default_padding_start_search">56dp</dimen>
+</resources>

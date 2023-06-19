@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ReactionViewBackground">
+        <item name="android:background">@drawable/bg_reaction_view</item>
+    </style>
+
+    <style name="ReactionView" parent="ReactionViewBackground">
+        <item name="android:paddingStart">9dp</item>
+        <item name="android:paddingEnd">9dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="textColor">@color/button_text_color</item>
+        <item name="textSize">@dimen/reaction_view_text_size</item>
+    </style>
+
+    <style name="TextAppearance.MyDiscord" parent="">
+        <item name="android:textSize">@dimen/data_in_list_message</item>
+    </style>
+
+    <style name="TextAppearance.MyDiscord.Data" parent="TextAppearance.MyDiscord">
+        <item name="android:textColor">@color/text_color_data_in_message_list</item>
+    </style>
+
+    <style name="TextAppearance.MyDiscord.Data.TextInputLayout">
+        <item name="android:textColor">@color/text_color_message</item>
+
+    </style>
+
+    <style name="TextAppearance.MyDiscord.Data.Toolbar">
+        <item name="android:textColor">@color/text_color_message</item>
+        <item name="android:textSize">44sp</item>
+    </style>
+
+    <style name="ShapeAppearance.MyDiscord.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+    </style>
+
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@color/window_background</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.BottomNavigationView.Colored.Fintech">
+        <item name="backgroundTint">@color/background_bottom_navigation_view</item>
+    </style>
+
+</resources>

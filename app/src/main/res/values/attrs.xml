@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ReactionView">
+        <attr name="reaction" format="string" />
+        <attr name="reactionCount" format="integer" />
+        <attr name="textColor" format="color|reference" />
+        <attr name="textSize" format="dimension|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="MessageWithReaction">
+        <attr name="isMe" format="boolean"/>
+    </declare-styleable>
+</resources>

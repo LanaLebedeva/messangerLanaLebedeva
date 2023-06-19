@@ -1,0 +1,66 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".channel.ui.ChannelsFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fragment_channels_layout_search"
+        style="TextAppearance.MyDiscord.Data.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/search"
+        android:textColorHint="@color/text_color_message"
+        app:endIconContentDescription="@string/search"
+        app:endIconDrawable="@drawable/bi_search"
+        app:endIconMode="custom"
+        app:endIconTint="@color/text_color_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragment_channels_edit_text_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_bottom_navigation_view"
+            android:paddingStart="@dimen/default_padding_start_search"
+            android:textColor="@color/text_color_message"
+            android:textSize="@dimen/default_search" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/fragment_channels_layout_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_bottom_navigation_view"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_channels_layout_search"
+        app:tabIndicatorFullWidth="false"
+        app:tabMode="fixed"
+        app:tabTextAppearance="@style/NotCapsButton"
+        app:tabTextColor="@color/text_color_message">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subscribed" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all_streams" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/fragment_channels_view_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_channels_layout_tabs" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

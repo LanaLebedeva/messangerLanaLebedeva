@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/channels_dest">
+
+    <fragment
+        android:id="@+id/channels_dest"
+        android:name="com.github.lanalebedeva.mydiscord.channel.ui.ChannelsFragment"
+        android:label="fragment_channels"
+        tools:layout="@layout/fragment_channels" >
+        <action
+            android:id="@+id/action_channels_dest_to_commonStream_dest"
+            app:destination="@id/commonStream_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/people_dest"
+        android:name="com.github.lanalebedeva.mydiscord.profile.ui.PeopleFragment"
+        android:label="fragment_people"
+        tools:layout="@layout/fragment_people" >
+        <action
+            android:id="@+id/action_people_dest_to_profile_dest"
+            app:destination="@id/profile_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile_dest"
+        android:name="com.github.lanalebedeva.mydiscord.profile.ui.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/commonStream_dest"
+        android:name="com.github.lanalebedeva.mydiscord.channel.ui.CommonStreamFragment"
+        android:label="fragment_common_stream"
+        tools:layout="@layout/fragment_common_stream">
+        <action
+            android:id="@+id/action_commonStream_dest_to_messageList_dest"
+            app:destination="@id/messageList_dest" />
+        <action
+            android:id="@+id/action_commonStream_dest_to_channels_dest"
+            app:destination="@id/channels_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageList_dest"
+        android:name="com.github.lanalebedeva.mydiscord.messages.ui.MessageListFragment"
+        android:label="MessageListFragment" >
+    </fragment>
+
+</navigation>

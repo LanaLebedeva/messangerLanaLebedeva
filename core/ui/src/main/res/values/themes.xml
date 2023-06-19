@@ -1,0 +1,25 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.V24.Theme.MyDiscord" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/text_color_name</item>
+        <item name="colorPrimaryVariant">@color/text_color_name</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/window_background</item>
+        <!-- Customize your theme here. -->
+<!--        <item name="android:windowBackground">@color/white</item>-->
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:navigationBarColor">@color/window_background</item>
+    </style>
+
+    <style name="Base.Theme.MyDiscord" parent="Base.V24.Theme.MyDiscord"/>
+    <style name="Theme.MyDiscord" parent="Base.Theme.MyDiscord">
+        <item name="textAppearanceButton">@style/NotCapsButton</item>
+        <item name="colorSurface">@color/background_is_me_message</item>
+    </style>
+</resources>

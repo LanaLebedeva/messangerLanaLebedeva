@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".channel.ui.CommonStreamFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_stream_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <ExpandableListView
+        android:id="@+id/fragment_stream_expandable_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_button_menu"
+        android:groupIndicator="@null"
+        android:textColor="@color/text_color_message"
+        android:paddingBottom="34dp"/>
+
+    <TextView
+        android:id="@+id/fragment_stream_channels_tv_error"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/error_try_again"
+        android:textColor="@color/text_color_message"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/fragment_stream_channels_loader"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>
